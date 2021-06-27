@@ -66,6 +66,11 @@ function timer() {
 }
 
 function showCorrectTime(value) {
+   if (value <= 5) {
+      TIMER.style.color = '#f00';
+   } else {
+      TIMER.style.color = '#fff';
+   }
    TIMER.innerHTML = `00:${value}`;
 }
 
