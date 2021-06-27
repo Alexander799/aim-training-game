@@ -20,6 +20,8 @@ SCREENS[1].addEventListener('click', event => {
    }
    if (event.target.classList.contains('size-btn')) {
       size = LEVEL_SIZES[parseInt(event.target.getAttribute('data-size'))];
+   }
+   if (size.length !== 0 && time !== 0) {
       nextScreen();
       startGame();
    }
@@ -101,6 +103,7 @@ function endGame() {
       BOARD.querySelector('h2').remove();
    }, 2500);
    score = 0;
+   size = [];
 }
 
 function getHEXRandomColor() {
